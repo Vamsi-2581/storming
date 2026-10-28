@@ -16,8 +16,8 @@ export const initialPlayerStatus: PlayerStatus[] = [
  *
  * **no game logic here**
  */
-export function usePlayers() {
-  const [players, setPlayers] = useState(initialPlayerStatus);
+export function usePlayers(initialPlayers = initialPlayerStatus) {
+  const [players, setPlayers] = useState(initialPlayers);
 
   const reorderPlayers = (
     reorder: (currentPlayers: PlayerStatus[]) => PlayerStatus[]
